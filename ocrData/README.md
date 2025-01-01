@@ -1,4 +1,4 @@
-# hello the outline may be wrong so if it is please help fix it with a pr 😁
+# hello the outline/glow may be wrong so if it is please help fix it with a pr 😁
 
 # credits of people who made the old characters' custom character json
 
