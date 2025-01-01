@@ -1,0 +1,12 @@
+{
+	"name": "Samurai",
+	"author": "RentaP",
+	"size": [40, 40],
+	"voice": "Samurai",
+	"clips": [
+		{ "name": "neutral", "frames": [1, 0], "loop": "onBeat", "fps": 0, "loopStart": 0, "portraitOffset": [12, 10], "portraitSize": [25, 30] },
+		{ "name": "happy", "frames": [2, 3, 4, 5, 5, 5], "loop": "no", "fps": 10, "loopStart": 0, "portraitOffset": [12, 10], "portraitSize": [25, 30] },
+		{ "name": "barely", "frames": [7, 6], "loop": "onBeat", "fps": 0, "loopStart": 0, "portraitOffset": [12, 10], "portraitSize": [25, 30] },
+		{ "name": "missed", "frames": [8, 9], "loop": "no", "fps": 2, "loopStart": 0, "portraitOffset": [12, 10], "portraitSize": [25, 30] } 
+	]
+}

@@ -1,0 +1,88 @@
+{
+    "name": "Bodybuilder",
+    "size": [
+        40,
+        40
+    ],
+    "voice": "Bodybuilder",
+    "clips": [
+        {
+            "name": "neutral",
+            "frames": [
+                1,
+                0
+            ],
+            "loop": "onBeat",
+            "fps": 0,
+            "loopStart": 0,
+            "portraitOffset": [
+                5,
+                11
+            ],
+            "portraitSize": [
+                25,
+                25
+            ]
+        },
+        {
+            "name": "happy",
+            "frames": [
+                2,
+                2,
+                3,
+                3,
+                2,
+                2,
+                3,
+                3
+            ],
+            "loop": "no",
+            "fps": 0,
+            "loopStart": 0,
+            "portraitOffset": [
+                5,
+                11
+            ],
+            "portraitSize": [
+                25,
+                25
+            ]
+        },
+        {
+            "name": "barely",
+            "frames": [
+                1,
+                0
+            ],
+            "loop": "no",
+            "fps": 0,
+            "loopStart": 0,
+            "portraitOffset": [
+                5,
+                11
+            ],
+            "portraitSize": [
+                25,
+                25
+            ]
+        },
+        {
+            "name": "missed",
+            "frames": [
+                1,
+                0
+            ],
+            "loop": "no",
+            "fps": 0,
+            "loopStart": 0,
+            "portraitOffset": [
+                5,
+                11
+            ],
+            "portraitSize": [
+                25,
+                25
+            ]
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "name": "Cole",
+    "voice": "Cole",
+    "size": [
+        40,
+        40
+    ],
+    "portraitOffset": [7, 10],
+    "clips": [
+        {
+            "name": "neutral",
+            "frames": [
+                1,
+                2,
+                3,
+                0
+            ],
+            "loop": "onBeat",
+            "fps": 0
+        },
+        {
+            "name": "happy",
+            "frames": [
+                5,
+                6,
+                5,
+                6,
+                7,
+                8,
+                7,
+                8
+            ],
+            "loop": "no",
+            "fps": 8
+        },
+        {
+            "name": "barely",
+            "frames": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                15,
+                16,
+                15,
+                16
+            ],
+            "loop": "no",
+            "fps": 10
+        },
+        {
+            "name": "beep1",
+            "frames": [
+                24,
+                25,
+                26,
+                26,
+                25
+            ],
+            "loop": "no",
+            "fps": 8
+        },
+        {
+            "name": "beep2",
+            "frames": [
+                25,
+                26,
+                26,
+                25
+            ],
+            "loop": "no",
+            "fps": 8
+        },
+        {
+            "name": "missed",
+            "frames": [
+                18,
+                19,
+                20,
+                21,
+                22,
+                21,
+                22,
+                21,
+                22,
+                21,
+                22
+            ],
+            "loop": "no",
+            "fps": 10
+        },
+        {
+            "name": "running",
+            "frames": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+            ],
+            "loop": "yes",
+            "fps": 10
+        },
+        {
+            "name": "gameover",
+            "frames": [
+                21,
+                22
+            ],
+            "loop": "yes",
+            "fps": 10
+        }
+    ]
+}

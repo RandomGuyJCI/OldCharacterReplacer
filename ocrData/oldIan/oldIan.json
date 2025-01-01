@@ -1,0 +1,18 @@
+{
+    "name" : "Ian",
+    "voice": "Ian",
+    "size": [32, 37],
+    "portraitOffset": [4, 12],
+    "clips" : [
+        { "name" : "neutral", "frames" : [6,7,8], "loop" : "yes", "fps" : 6.8},
+        { "name" : "happy", "frames" : [6], "loop" : "off", "fps" : 0},
+        { "name" : "barely", "frames" : [6], "loop" : "off", "fps" : 0},
+        { "name" : "missed", "frames" : [6], "loop" : "off", "fps" : 0},
+
+        { "name" : "sighing", "frames" : [0,1,2,3,4], "loop" : "yes", "fps" : 4},
+        { "name" : "explaining",   "frames" : [6,7,8], "loop" : "yes", "fps" : 6.8},
+        { "name" : "explainingstop",   "frames" : [6,7,8], "loop" : "no", "fps" : 2},
+        { "name" : "running",  "frames" : [10,11,12,13], "loop" : "yes", "fps" : 8 },
+        { "name" : "typing",  "frames" : [15,16,17,18], "loop" : "yes", "fps" : 8 }
+    ]
+}
