@@ -32,6 +32,9 @@
     <Reference Include="Assembly-CSharp" IncludeAssets="compile">
         <HintPath>lib\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-CSharp-firstpass" IncludeAssets="compile">
+        <HintPath>lib\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="RDTools" IncludeAssets="compile">
         <HintPath>lib\RDTools.dll</HintPath>
     </Reference>

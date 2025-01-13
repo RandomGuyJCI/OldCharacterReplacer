@@ -1,4 +1,9 @@
+using System;
+using System.Text.RegularExpressions;
 using HarmonyLib;
+using RDLevelEditor;
+using UnityEngine;
+using static tk2dSpriteAnimator;
 
 namespace OldCharacterReplacer;
 
@@ -8,34 +13,34 @@ public partial class OldCharacterReplacer
 {
     public class ChangeCharPatch
     {
-        [HarmonyPostfix]
+        [HarmonyPrefix]
         [HarmonyPatch(typeof(scrChar), nameof(scrChar.ChangeCharacter))]
-        public static void CCPostfix(scrChar __instance, Character newChar)
+        public static bool CCPrefix(scrChar __instance, Character newChar)
         {
             if (!OCRUtils.IsCustomLevel())
-                return;
+                return true;
  
             CharacterPlusCustom oldChar = OCRUtils.GetOldCharacter(newChar);
             if (newChar == oldChar.character)
-                return;
+                return true;
 
-            __instance.character = oldChar.character;
-            __instance.customAnimation.enabled = oldChar.character == Character.Custom;
-            if (__instance.customAnimation.enabled)
-            {
-                __instance.shaderRenderer.material.SetPalette("");
-                Level_Custom level_Custom = scnGame.instance.currentLevel as Level_Custom;
-                __instance.customAnimation.data = level_Custom.customCharacterData[oldChar.customCharacterName];
-                __instance.customAnimation.animationCompleted = __instance.OnCustomAnimEnd;
-                __instance.customAnimation.enabled = true;
-            }
+            __instance.animPrefixName = "";
+            __instance.charName = "";
+            __instance.expressionPrefix = "";
+            __instance.neutralAnimName = "neutral";
+            __instance.barelyAnimName = "barely";
+            __instance.missedAnimName = "missed";
+            __instance.happyAnimName = "happy";
+            __instance.shaderRenderer.material.SetPalette("");
+            __instance.customAnimation.enabled = false;
+            __instance.customAnimation.currentClip = null;
+
+            if (oldChar.character == Character.Custom)
+                __instance.Setup(oldChar.character, "", oldChar.customCharacterName);
             else
-            {
-                __instance.charName = oldChar.character.ToString();
-                __instance.SetPaletteNum(0);
-            }
-            __instance.PlayExpression("neutral");
-            return;
+                __instance.Setup(oldChar.character);
+            
+            return false;
         }
 
         // messes with palette so gotta mess back
@@ -50,12 +55,55 @@ public partial class OldCharacterReplacer
             if (newChar == oldChar.character)
                 return;
 
-            __instance.character.shaderRenderer.material.SetPalette("");   
             if (oldChar.character != Character.Custom)
                 __instance.character.shaderRenderer.material.SetPalette(oldChar.character.ToString());
+            else
+                __instance.character.shaderRenderer.material.SetPalette("");   
             __instance.character.shaderDataSource = __instance.character;
             __instance.character.UpdateShaderDataSource();
             __instance.character.shaderData.CopyFrom(__instance.shaderData);
+        }
+
+        // preload...
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(LevelEvent_CallCustomMethod), nameof(LevelEvent_CallCustomMethod.Run))]
+        public static void CCMPrefix(LevelEvent_CallCustomMethod __instance)
+        {
+            string code = __instance.methodName;
+            code = RemoveTextBeginning(code, "game.");
+            code = RemoveTextBeginning(code, "level.");
+            if (!code.StartsWith("ChangeCharacter("))
+                return;
+
+            code = RemoveTextBeginning(code, "ChangeCharacter(");
+            string characterStr = "";
+            if (code.StartsWith("\""))
+            {
+                Match speechMarks = Regex.Match(code, @"^""([A-Za-z0-9]*)"".*", RegexOptions.Multiline);
+                if (speechMarks.Index >= 0 && speechMarks.Groups.Count == 2)
+                    characterStr = speechMarks.Groups[1].Value;
+            }
+            else if (code.StartsWith("str:"))
+            {
+                code = RemoveTextBeginning(code, "str:");
+                characterStr = code[..code.IndexOf(',')];
+            }
+            else 
+                return;
+            
+            if (!Enum.TryParse(typeof(Character), characterStr, out var uncastedCharacter))
+                return;
+
+            Character character = (Character)uncastedCharacter;
+            OCRUtils.GetOldCharacter(character); // we just need to get it initially
+        }   
+
+        // idk ??
+        public static string RemoveTextBeginning(string str, string token)
+        {
+            if (str.StartsWith(token))
+                return str.RemoveTextIfStartsWith(token);
+            return str;
         }
     }
 }
