@@ -13,14 +13,32 @@ public partial class OldCharacterReplacer
 {
     public class ChangeCharPatch
     {
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(scrRowEntities), nameof(scrRowEntities.ChangeCharacter))]
+        public static bool RowPrefix(scrRowEntities __instance, Character newChar)
+        {
+            if (!OCRUtils.IsCustomLevel())
+                return true;
+
+            CharacterPlusCustom oldChar = OCRUtils.GetOldCharacter(newChar);
+            logger.LogMessage(__instance.character.character);
+            logger.LogMessage(oldChar.character);
+            logger.LogMessage(newChar);
+            logger.LogMessage("");
+            if (__instance.character.character == Character.Custom && oldChar.character != Character.Custom)
+                return false;
+
+            logger.LogMessage(",lmk;");
+            return true;
+        }
+
         [HarmonyPrefix]
         [HarmonyPatch(typeof(scrChar), nameof(scrChar.ChangeCharacter))]
         public static bool CCPrefix(scrChar __instance, Character newChar)
         {
             if (!OCRUtils.IsCustomLevel())
                 return true;
-            if (__instance.character == Character.Custom)
-                return false;
  
             CharacterPlusCustom oldChar = OCRUtils.GetOldCharacter(newChar);
             if (newChar == oldChar.character)
@@ -52,13 +70,8 @@ public partial class OldCharacterReplacer
         {
             if (!OCRUtils.IsCustomLevel())
                 return;
- 
-            CharacterPlusCustom oldChar = OCRUtils.GetOldCharacter(newChar);
-            if (newChar == oldChar.character)
-                return;
-
-            if (oldChar.character != Character.Custom)
-                __instance.character.shaderRenderer.material.SetPalette(oldChar.character.ToString());
+            if (__instance.character.character != Character.Custom)
+                __instance.character.shaderRenderer.material.SetPalette(__instance.character.character.ToString());
             else
                 __instance.character.shaderRenderer.material.SetPalette("");   
             __instance.character.shaderDataSource = __instance.character;
