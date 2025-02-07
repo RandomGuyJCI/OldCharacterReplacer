@@ -19,6 +19,8 @@ public partial class OldCharacterReplacer
         {
             if (!OCRUtils.IsCustomLevel())
                 return true;
+            if (__instance.character == Character.Custom)
+                return false;
  
             CharacterPlusCustom oldChar = OCRUtils.GetOldCharacter(newChar);
             if (newChar == oldChar.character)
