@@ -22,14 +22,9 @@ public partial class OldCharacterReplacer
                 return true;
 
             CharacterPlusCustom oldChar = OCRUtils.GetOldCharacter(newChar);
-            logger.LogMessage(__instance.character.character);
-            logger.LogMessage(oldChar.character);
-            logger.LogMessage(newChar);
-            logger.LogMessage("");
             if (__instance.character.character == Character.Custom && oldChar.character != Character.Custom)
                 return false;
 
-            logger.LogMessage(",lmk;");
             return true;
         }
 
