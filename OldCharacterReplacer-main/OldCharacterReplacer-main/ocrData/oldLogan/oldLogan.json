@@ -1,0 +1,14 @@
+{
+	"name": "Logan",
+	"author": "RentaP",
+	"size": [33, 33],
+    "portraitOffset": [3, 5]
+	"voice": "Boy",
+	"clips": [
+			{ "name" : "neutral", "frames" : [1, 0], "loop" : "onBeat", "fps" : 0},
+			{ "name" : "whaat", "frames" : [31, 32], "loop" : "onBeat", "fps" : 0},
+			{ "name" : "happy",   "frames" : [2, 3], "loop" : "no", "fps" : 2 },
+			{ "name" : "barely",  "frames" : [5, 5, 4], "loop" : "onBeat", "fps" : 0},
+			{ "name" : "missed",  "frames" : [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 16, 16, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26], "loop" : "no", "fps" : 10 }
+		]
+	}

@@ -1,0 +1,51 @@
+{
+	"name": "Cole Brew",
+	"author": "RentaP",
+    "portraitOffset": [6, 12]
+	"voice": "HoodieBoy",
+	"size": [ 42, 43 ],
+	"clips": [
+		{
+			"name": "neutral",
+			"frames": [ 1, 0 ],
+			"loop": "onBeat",
+			"fps": 0
+		},
+		{
+			"name": "happy",
+			"frames": [ 2, 3 ],
+			"loop": "no",
+			"fps": 0
+		},
+		{
+			"name": "barely",
+			"frames": [ 4, 5 ],
+			"loop": "no",
+			"fps": 0
+		},
+		{
+			"name": "missed",
+			"frames": [ 4, 5 ],
+			"loop": "no",
+			"fps": 0
+		},
+		{
+			"name": "beep1",
+			"frames": [ 6, 7, 7, 7, 6 ],
+			"loop": "no",
+			"fps": 4
+		},
+		{
+			"name": "beep2",
+			"frames": [ 7 ],
+			"loop": "no",
+			"fps": 4
+		},
+		{
+			"name": "gameover",
+			"frames": [ 4, 5 ],
+			"loop": "yes",
+			"fps": 4
+		}
+	]
+}

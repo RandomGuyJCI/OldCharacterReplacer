@@ -1,0 +1,12 @@
+{
+	"name": "Kanye West",
+	"author": "RentaP",
+    "portraitOffset": [10, 12]
+	"size": [36, 40],
+	"clips": [
+		{ "name": "neutral", "frames": [1, 0], "loop": "onBeat", "fps": 0, "portraitOffset": [5, 9], "portraitSize": [25, 30] },
+		{ "name": "happy", "frames": [1, 0], "loop": "onBeat", "fps": 0, "portraitOffset": [5, 9], "portraitSize": [25, 30] },
+		{ "name": "barely", "frames": [1, 0], "loop": "onBeat", "fps": 0, "portraitOffset": [5, 9], "portraitSize": [25, 30] },
+		{ "name": "missed", "frames": [1, 0], "loop": "onBeat", "fps": 0, "portraitOffset": [5, 9], "portraitSize": [25, 30] } 
+	]
+}
