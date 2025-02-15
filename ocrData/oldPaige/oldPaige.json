@@ -2,7 +2,7 @@
     "name" : "Paige",
     "size": [40, 43],
     "voice": "Paige",
-    "portraitOffset": [5, 12],
+    "portraitOffset": [9, 12],
     "clips": [
         { "name" : "neutral", "frames" : [81, 80], "loop" : "onBeat", "fps" : 0},
         { "name" : "barely",  "frames" : [62], "loop" : "no", "fps" : 2},
