@@ -2,7 +2,8 @@
 
 # credits of people who made the old characters' custom character json
 
-- RentaP (dev) - Samurai, Logan, Hailey
+- RentaP (dev) - Samurai, Logan, Hailey, Cole (older), Farmer
+- Willow - adjusted a lot of the jsons to be accurate
 
 if i haven't credited a person for a character's json, i probably either got the json from the game, or created it myself
 

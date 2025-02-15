@@ -13,7 +13,6 @@ public partial class OldCharacterReplacer
 {
     public class ChangeCharPatch
     {
-
         [HarmonyPrefix]
         [HarmonyPatch(typeof(scrRowEntities), nameof(scrRowEntities.ChangeCharacter))]
         public static bool RowPrefix(scrRowEntities __instance, Character newChar)

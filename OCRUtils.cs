@@ -9,14 +9,11 @@ namespace OldCharacterReplacer;
 public class OCRUtils
 {
     // TODO: Get a proper date on:
-    // TODO: - HoodieBoy -> 30 -> HoodieBoyAlternate
-    // TODO: - Farmer -> 34 -> FarmerAlternate
     // TODO: - Miner -> 43 -> olderMiner
-    // TODO: and just double check them all i guess as well
     public static List<object[]> chars = [
-        [Character.HoodieBoy, 30, Character.HoodieBoyAlternate, null],
-
-        [Character.Farmer, 34, Character.FarmerAlternate, null],
+        // these are just for dialogue portraits
+        [Character.HoodieBoy, 30, Character.Custom, "olderCole"],
+        [Character.Farmer, 30, Character.Custom, "oldFarmer"],
         
         // this is when early access happened so massive spike here in changes
         [Character.Samurai, 43, Character.Custom, "oldSamurai"],
