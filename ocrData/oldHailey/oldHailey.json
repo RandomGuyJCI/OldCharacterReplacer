@@ -4,9 +4,11 @@
 	"size": [33, 33],
 	"voice": "Girl",
 	"clips": [
-		{ "name": "neutral", "frames": [1, 0, 0, 0], "loop": "onBeat", "fps": 0, "loopStart": 0, "portraitOffset": [5, 6], "portraitSize": [25, 25] },
+		{ "name": "neutral", "frames": [1, 0], "loop": "onBeat", "fps": 0, "loopStart": 0, "portraitOffset": [5, 6], "portraitSize": [25, 25] },
 		{ "name": "happy", "frames": [2, 3], "loop": "no", "fps": 2, "loopStart": 0, "portraitOffset": [5, 6], "portraitSize": [25, 25] },
 		{ "name": "barely", "frames": [4, 5, 6, 7, 8, 8, 8, 8], "loop": "no", "fps": 10, "loopStart": 0, "portraitOffset": [5, 6], "portraitSize": [25, 25] },
-		{ "name": "missed", "frames": [9, 10, 11, 12, 13, 13, 13, 13, 13, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], "loop": "no", "fps": 11, "loopStart": 0, "portraitOffset": [5, 6], "portraitSize": [25, 25] } 
+		{ "name": "Surprised", "frames": [10, 10], "loop": "onBeat", "fps": 0, "loopStart": 0, "portraitOffset": [5, 6], "portraitSize": [25, 25] },
+		{ "name": "Cry", "frames": [6, 6], "loop": "onBeat", "fps": 0, "loopStart": 0, "portraitOffset": [5, 6], "portraitSize": [25, 25] },
+		{ "name": "missed", "frames": [9, 10, 11, 12, 13, 13, 13, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], "loop": "no", "fps": 10, "loopStart": 0, "portraitOffset": [5, 6], "portraitSize": [25, 25] } 
 	]
 }

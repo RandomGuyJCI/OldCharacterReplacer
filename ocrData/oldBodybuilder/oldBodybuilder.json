@@ -29,14 +29,9 @@
             "frames": [
                 2,
                 2,
-                3,
-                3,
-                2,
-                2,
-                3,
                 3
             ],
-            "loop": "no",
+            "loop": "onBeat",
             "fps": 0,
             "loopStart": 0,
             "portraitOffset": [
