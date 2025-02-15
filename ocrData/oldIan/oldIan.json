@@ -13,6 +13,6 @@
         { "name" : "explaining",   "frames" : [6,7,8], "loop" : "yes", "fps" : 6.8},
         { "name" : "explainingstop",   "frames" : [6,7,8], "loop" : "no", "fps" : 2},
         { "name" : "running",  "frames" : [10,11,12,13], "loop" : "yes", "fps" : 8 },
-        { "name" : "typing",  "frames" : [15,16,17,18], "loop" : "yes", "fps" : 8 }
+        { "name" : "typing",  "frames" : [15,16,17,18], "loop" : "yes", "fps" : 10 }
     ]
 }
