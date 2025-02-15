@@ -12,7 +12,7 @@ public class OCRUtils
     // TODO: and just double check them all i guess as well
     public static List<object[]> chars = [
         [Character.HoodieBoy, 30, Character.Custom, "olderCole"],
-        [Character.Farmer, 30 Character.Custom, "oldFarmer"],
+        [Character.Farmer, 30, Character.Custom, "oldFarmer"],
 
 	// Unsure when these were actually deleted, just using most recent version because no one uses them anyway
 	[Character.Kanye, 61, Character.Custom, "Kanye"],
