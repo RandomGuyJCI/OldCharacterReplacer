@@ -4,7 +4,7 @@
     "voice": "Paige",
     "portraitOffset": [5, 12],
     "clips": [
-        { "name" : "neutral", "frames" : [81, 80], "loop" : "onBeat", "fps" : 2},
+        { "name" : "neutral", "frames" : [81, 80], "loop" : "onBeat", "fps" : 0},
         { "name" : "barely",  "frames" : [62], "loop" : "no", "fps" : 2},
         { "name" : "gameover", "frames" : [0,1,2,3,4,5,6,7,8], "loop" : "yes", "fps" : 5, "loopStart": 6},
         { "name" : "missed",   "frames" : [10,11,12,13,14,15,16,17,18,19,20,21], "loop" : "no", "fps" : 7, "loopStart": 10},
