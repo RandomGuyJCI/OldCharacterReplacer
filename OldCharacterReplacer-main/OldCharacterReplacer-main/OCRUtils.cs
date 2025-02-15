@@ -13,10 +13,6 @@ public class OCRUtils
     public static List<object[]> chars = [
         [Character.HoodieBoy, 30, Character.Custom, "olderCole"],
         [Character.Farmer, 30, Character.Custom, "oldFarmer"],
-
-	// Unsure when these were actually deleted, just using most recent version because no one uses them anyway
-	[Character.Kanye, 61, Character.Custom, "Kanye"],
-	[Character.Weeknd, 61, Character.Custom, "Weeknd"],
         
         // this is when early access happened so massive spike here in changes
         [Character.Samurai, 43, Character.Custom, "oldSamurai"],
