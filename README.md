@@ -1,6 +1,6 @@
 # OldCharacterReplacer
 
-## bepinex 6 mod...
+## bepinex 5 mod...
 
 another mod for rhythm doctor, this time it actually needs a data folder
 
