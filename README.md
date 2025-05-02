@@ -2,6 +2,8 @@
 
 ## bepinex 6 mod...
 
+get bepinex 5 version from [Jci fork](https://github.com/RandomGuyJCI/OldCharacterReplacer)
+
 another mod for rhythm doctor, this time it actually needs a data folder
 
 ## what is it
