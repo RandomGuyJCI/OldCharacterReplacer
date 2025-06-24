@@ -66,7 +66,7 @@ public class OCRUtils
 
         var path = OldCharacterReplacer.path + $@"\{name}\";
         var dictionaryPrefix = OldCharacterReplacer.dictionaryPrefix;
-        var ccd = (scnGame.instance.currentLevel as Level_Custom).customCharacterData;
+        var ccd = scnGame.instance.currentLevel.customCharacterData;
         var key = dictionaryPrefix + name;
         if (ccd.ContainsKey(key))
             return;
@@ -80,7 +80,7 @@ public class OCRUtils
         img.filterMode = FilterMode.Point;
         img.wrapMode = TextureWrapMode.Clamp;
 
-        Level_Custom.LoadCustomCharacter(ccd, key, jsonTxt, img, outline, glow, freeze);
+        LevelBase.LoadCustomCharacter(ccd, key, jsonTxt, img, outline, glow, freeze);
     }
 
     private static Texture2D LoadTex2D(string path, string key)
